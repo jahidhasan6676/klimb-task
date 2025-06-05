@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaRunning, FaArrowDown } from 'react-icons/fa';
 
@@ -126,8 +127,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <FaArrowDown className="text-gray-400 text-2xl" />
       </motion.div>
     </section>
