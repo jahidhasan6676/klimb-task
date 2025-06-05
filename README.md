@@ -1,12 +1,47 @@
-# React + Vite
+# 🌟 Klimb Task – Adventure Quiz UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a creative landing page interface that introduces users to a quiz journey with visual guidance and animations. The primary goal is to make the experience intuitive, adventurous, and enjoyable for users.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✅ Features Implemented
+
+- ✅ Hero Section with motion-based entry animation
+- ✅ Quiz Launcher Section with CTA button
+- ✅ Horizontal Journey Tracker (scrollable card carousel)
+- ✅ Framer Motion-based smooth transitions
+- ✅ Fully responsive layout
+- ✅ Tailwind CSS-based design system
+- ✅ Iconography using React Icons
+- ✅ SwiperJS for horizontal card scrolling
+
+---
+
+## 🛠️ Tech Stack Used
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Carousel:** SwiperJS
+- **Icons:** React Icons
+
+---
+
+## 📦 Installation & Run Locally
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/klimb-task.git
+cd klimb-task
+2. Install Dependencies
+npm install
+3. Start the Development Server
+npm run dev
+4. Build for Production
+npm run build
+5. Preview Production Build
+npm run preview
