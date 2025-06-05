@@ -4,7 +4,7 @@ import { FaArrowRight, FaRunning, FaChartLine } from 'react-icons/fa';
 
 const QuizLauncher = () => {
   return (
-    <section id="quiz" className="mb-20 py-10 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <section id="quiz" className="mb-20 ">
       <div className="w-11/12 mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Mascot and Visual Content */}

@@ -1,6 +1,5 @@
 # 🌟 Klimb Task – Adventure Quiz UI
 
----
 
 ## 🚀 Project Overview
 
@@ -35,7 +34,7 @@ This project is a creative landing page interface that introduces users to a qui
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/klimb-task.git
+git clone https://github.com/jahidhasan6676/klimb-task.git
 cd klimb-task
 2. Install Dependencies
 npm install

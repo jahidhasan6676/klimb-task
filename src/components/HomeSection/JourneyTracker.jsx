@@ -11,6 +11,8 @@ const JourneyTracker = () => {
     offset: ["start end", "end start"]
   });
 
+  const x = useTransform(scrollYProgress, [0, 1], ['5%', '-15%']);
+
   const steps = [
     {
       id: 1,
@@ -49,8 +51,11 @@ const JourneyTracker = () => {
     }
   ];
 
-  // Animation values
-  const x = useTransform(scrollYProgress, [0, 1], ['5%', '-15%']);
+ 
+  const animations = steps.map((_, index) => ({
+    y: useTransform(scrollYProgress, [index * 0.15, (index + 1) * 0.15], [100, 0]),
+    opacity: useTransform(scrollYProgress, [index * 0.15, (index + 1) * 0.15], [0, 1])
+  }));
 
   return (
     <section ref={ref} className="pt-20 overflow-hidden">
@@ -64,32 +69,24 @@ const JourneyTracker = () => {
           <motion.div 
             style={{ x }}
             className="absolute top-0 left-0 flex space-x-8 w-max">
-            {steps.map((step, index) => {
-              const y = useTransform(scrollYProgress, 
-                [index * 0.15, (index + 1) * 0.15],
-                [100, 0]
-              );
-              const opacity = useTransform(scrollYProgress,
-                [index * 0.15, (index + 1) * 0.15],
-                [0, 1]
-              );
-
-              return (
-                <motion.div
-                  key={step.id}
-                  style={{ y, opacity }}
-                  className={`w-72 flex-shrink-0 h-full ${step.color} rounded-2xl p-8 shadow-md flex flex-col`}>
-                  <div className="mb-6 flex items-center justify-center w-16 h-16 bg-white rounded-full">
-                    {step.icon}
-                  </div>
-                  <div className="mb-4 flex items-center justify-center w-10 h-10 bg-white rounded-full text-lg font-bold">
-                    {step.id}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </motion.div>
-              );
-            })}
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.id}
+                style={{
+                  y: animations[index].y,
+                  opacity: animations[index].opacity
+                }}
+                className={`w-72 flex-shrink-0 h-full ${step.color} rounded-2xl p-8 shadow-md flex flex-col`}>
+                <div className="mb-6 flex items-center justify-center w-16 h-16 bg-white rounded-full">
+                  {step.icon}
+                </div>
+                <div className="mb-4 flex items-center justify-center w-10 h-10 bg-white rounded-full text-lg font-bold">
+                  {step.id}
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
 

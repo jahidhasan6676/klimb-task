@@ -44,7 +44,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="pb-20 ">
       <div className="w-11/12 mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">
           What Parents Are Saying

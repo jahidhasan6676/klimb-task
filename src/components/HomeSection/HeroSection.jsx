@@ -21,7 +21,7 @@ const HeroSection = () => {
   return (
     <section 
       ref={ref}
-      className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 py-16 md:py-24">
+      className="relative -mt-[65px] overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 py-[150px]">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <motion.div
